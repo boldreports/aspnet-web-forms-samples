@@ -61,6 +61,7 @@ namespace ReportsWebFormsSamples.Controllers
         }
 
         [HttpPost]
+        [CustomCompression]
         public object PostDesignerAction(Dictionary<string, object> jsonResult)
         {
             string reportType = "";
@@ -78,6 +79,7 @@ namespace ReportsWebFormsSamples.Controllers
             return ReportDesignerHelper.ProcessDesigner(jsonResult, this, null);
         }
 
+        [CustomCompression]
         public object PostReportAction(Dictionary<string, object> jsonResult)
         {
             return ReportHelper.ProcessReport(jsonResult, this as IReportController);

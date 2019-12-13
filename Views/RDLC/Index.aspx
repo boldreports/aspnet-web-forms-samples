@@ -5,16 +5,19 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <Bold:ReportDesigner ID="designer" runat="server" OnClientAjaxBeforeLoad="onAjaxBeforeLoad" OnClientReportOpened="onReportOpened" ServiceUrl='<%# Globals.DESIGNER_SERVICE_URL %>' OnClientCreate="controlCreate" OnClientToolbarRendering="toolbarRendering" OnClientToolbarClick="toolbarClick"></Bold:ReportDesigner>
 
-    
-<script>
-    let designerInst;
+
+    <script>
+        let designerInst;
         let isServerReoport;
         function controlCreate() {
-            designerInst =  $(<%=designer.ClientID%>).data('boldReportDesigner');
+            designerInst = $(<%=designer.ClientID%>).data('boldReportDesigner');
             let reportName = getReportName();
             designerInst.setModel({
                 reportType: 'RDLC',
-                previewReport: previewReport
+                previewReport: previewReport,
+                previewOptions: {
+                    exportItemClick: "onExportItemClick"
+                }
             });
             if (reportName) {
                 designerInst.openReport(reportName);
@@ -22,7 +25,7 @@
         }
 
         function onAjaxBeforeLoad(args) {
-                args.data = JSON.stringify({ reportType: "RDLC" });
+            args.data = JSON.stringify({ reportType: "RDLC" });
         }
 
         function onReportOpened(args) {
@@ -58,12 +61,12 @@
             const reportNameRegex = /[\\?&]report-name=([^&#]*)/.exec(location.search);
             return reportNameRegex ? reportNameRegex[1] : undefined;
         }
-</script>
+    </script>
 </asp:Content>
 
 <asp:Content ID="descriptionContent" ContentPlaceHolderID="description" runat="server">
 
-       <div id="description">
+    <div id="description">
         <p>
             The Syncfusion Enterprise BI Reporting is an end-to-end solution for creating, managing and sharing interactive
             business reports.

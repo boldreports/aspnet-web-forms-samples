@@ -37,6 +37,30 @@ namespace ReportsWebFormsSamples.Controllers
                 ReportWriter reportWriter = new ReportWriter();
                 reportWriter.ReportProcessingMode = ProcessingMode.Remote;
                 reportWriter.ReportPath = HttpContext.Current.Server.MapPath("~/Resources/Report/" + reportName + ".rdl");
+
+
+                var resourcesPath = HttpContext.Current.Server.MapPath("~/Scripts");
+
+                reportWriter.ExportResources.Scripts = new List<string>
+                {
+                    resourcesPath + @"\bold-reports\common\bold.reports.common.min.js",
+                    resourcesPath + @"\bold-reports\common\bold.reports.widgets.min.js",
+                    //Chart component script
+                    resourcesPath + @"\bold-reports\data-visualization\ej.chart.min.js",
+                    //Gauge component scripts
+                    resourcesPath + @"\bold-reports\data-visualization\ej.lineargauge.min.js",
+                    resourcesPath + @"\bold-reports\data-visualization\ej.circulargauge.min.js",
+                    //Map component script
+                    resourcesPath + @"\bold-reports\data-visualization\ej.map.min.js",
+                    //Report Viewer Script
+                    resourcesPath + @"\bold-reports\bold.report-viewer.min.js"
+                };
+
+                reportWriter.ExportResources.DependentScripts = new List<string>
+                {
+                    resourcesPath + @"\dependent\jquery.min.js"
+                };
+
                 if (type == "pdf")
                 {
                     fileName += ".pdf";

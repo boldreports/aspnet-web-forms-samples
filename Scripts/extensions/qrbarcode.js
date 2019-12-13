@@ -106,6 +106,7 @@ var EJQRBarcode = (function () {
             'HeaderText': this.customJSON.Name,
             'PropertyType': 'qrbarcode',
             'IsEditHeader': true,
+            'SubType': 'qrbarcode',
             'Items': [{
                     'CategoryId': 'basicsettings',
                     'DisplayName': this.getLocale('categoryBasicSettings'),
