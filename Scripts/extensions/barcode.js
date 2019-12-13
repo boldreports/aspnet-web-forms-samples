@@ -109,6 +109,7 @@ var EJBarcode = (function () {
             'HeaderText': this.customJSON.Name,
             'PropertyType': 'barcode',
             'IsEditHeader': true,
+            'SubType': 'barcode',
             'Items': [{
                     'CategoryId': 'basicsettings',
                     'DisplayName': this.getLocale('categoryBasicSettings'),

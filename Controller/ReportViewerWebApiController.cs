@@ -45,6 +45,7 @@ namespace ReportsWebFormsSamples.Controllers
 
         }
 
+        [CustomCompression]
         public object PostReportAction(Dictionary<string, object> jsonResult)
         {
             return ReportHelper.ProcessReport(jsonResult, this);
