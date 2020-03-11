@@ -21,7 +21,7 @@
                 envelope format.</li>
             <li>To keep data in a single page, rectangle report item is used as a container with the KeepTogether
                 property as true.</li>
-            <li><a href="https://documentation.boldreports.com/on-premise/report-designer/compose-report/set-expression/"
+            <li><a href="https://documentation.boldreports.com/on-premise/report-designer/compose-report/properties-panel/#set-expression"
                     target="_blank">Expression</a> is used to frame the employee details dynamically at run time.</li>
         </ul>
         <p>
@@ -32,7 +32,7 @@
         </p>
         <p>
             Mail merge report designing steps can be found in this <a
-                href="https://documentation.boldreports.com/on-premise/report-designer/compose-report/configure-report-items/list-report-item/design-ssrs-rdl-report-using-list"
+                href="https://documentation.boldreports.com/on-premise/report-designer/report-items/list/design-ssrs-rdl-report-using-list/"
                 target="_blank">documentation</a> section.
         </p>
     </div>

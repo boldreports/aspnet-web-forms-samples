@@ -19,7 +19,7 @@
         </p>
         <p>
             More information about chart data region can be found in this <a
-            href="https://documentation.boldreports.com/on-premise/report-designer/compose-report/configure-report-items/chart-report-item/chart-reportitem/"
+            href="https://documentation.boldreports.com/on-premise/report-designer/report-items/chart/"
             target="_blank">documentation</a> section.
         </p>    
     </div>

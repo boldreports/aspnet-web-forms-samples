@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Http;
 using BoldReports.Web;
 using BoldReports.Web.ReportViewer;
+using BoldReports.Base.Logger;
 
 namespace ReportsWebFormsSamples.Controllers
 {
@@ -22,12 +23,12 @@ namespace ReportsWebFormsSamples.Controllers
 
         public void LogError(string message, Exception exception, MethodBase methodType, ErrorType errorType)
         {
-            Global.log.DebugFormat("Logging Error Message Time: {0};  Error: {1}, Method: {2}; ErrorType: {3}", DateTime.Now, message, methodType, errorType == ErrorType.Error ? "Error" : "Info");
+            LogExtension.LogError(message, exception, methodType, errorType == ErrorType.Error ? "Error" : "Info");
         }
 
         public void LogError(string errorCode, string message, Exception exception, string errorDetail, string methodName, string className)
         {
-            Global.log.DebugFormat("Logging Error Message Time: {0};  Error: {1}, Method: {2}; ErrorType: {3}", DateTime.Now, message, methodName, "Error");
+            LogExtension.LogError(message, exception, System.Reflection.MethodBase.GetCurrentMethod(), errorCode + "-" + errorDetail);
         }
 
         public void OnInitReportOptions(ReportViewerOptions reportOption)
