@@ -15,7 +15,7 @@
     <div id="description">
         <p>
             This demo illustrates the Conditional Formatting feature along with <a
-                href="https://documentation.boldreports.com/on-premise/report-designer/report-parameters/add-report-parameter/"
+                href="https://documentation.boldreports.com/on-premise/report-designer/report-parameters/add/"
                 target="_blank">Report Parameters</a> using the Tablix data region. Based on the country name selected
             in the <code>Highlight Country</code>
             parameter, the available customer details of the respective country are highlighted using conditional
@@ -24,13 +24,13 @@
         </p>
         <ul>
             <li><b>Conditional IIF Statement</b> is used to build <a
-                    href="https://documentation.boldreports.com/on-premise/report-designer/compose-report/set-expression/"
+                    href="https://documentation.boldreports.com/on-premise/report-designer/compose-report/properties-panel/#set-expression"
                     target="_blank">expression</a> for background color, thereby it highlights the rows based on the
                 <code>Country Name</code> field.</li>
         </ul>
         <p>
             Conditional row formatting report designing steps can be found in this <a
-                href="https://documentation.boldreports.com/on-premise/report-designer/compose-report/configure-report-items/conditional-formatting-tablix-data-region/"
+                href="https://documentation.boldreports.com/on-premise/report-designer/report-items/tablix/conditional-formatting-tablix-data-region/"
                 target="_blank">documentation</a> section.
         </p>
     </div>

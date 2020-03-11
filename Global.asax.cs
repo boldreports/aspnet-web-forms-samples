@@ -13,14 +13,16 @@ using ReportsWebFormsSamples.Models;
 using System.Text;
 using Bold.Licensing;
 using System.IO;
+using BoldReports.Base.Logger;
 
 namespace ReportsWebFormsSamples
 {
     public class Global : HttpApplication
     {
-        public static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         void Application_Start(object sender, EventArgs e)
         {
+            log4net.GlobalContext.Properties["LogPath"] = this.GetAppDataFolderPath();
+            BoldReports.Base.Logger.LogExtension.RegisterLog4NetConfig();
             // Register Bold Reports license
             string License = File.ReadAllText(Server.MapPath("BoldLicense.txt"), Encoding.UTF8);
             BoldLicenseProvider.RegisterLicense(License);
@@ -104,6 +106,17 @@ namespace ReportsWebFormsSamples
                 Context.RewritePath(path.Replace(path, "~/Views/" + reportRouterPath + "/Index.aspx"));
             }
 
+        }
+        public string GetAppDataFolderPath()
+        {
+            try
+            {
+                return System.IO.Path.GetFullPath(AppDomain.CurrentDomain.BaseDirectory);
+            }
+            catch
+            {
+                return null;
+            }
         }
     }
 
