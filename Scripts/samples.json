@@ -5,10 +5,10 @@
     "northwind"
   ],
   "otherPlatforms": {
-    "Angular": "/demos/angular/#/",
-    "JavaScript": "/demos/javascript/#/",
-    "ASP.NET Core": "/demos/aspnet-core/",
-    "ASP.NET MVC": "/demos/aspnet-mvc/"
+    "Angular": "angular/#/",
+    "JavaScript": "javascript/#/",
+    "ASP.NET Core": "aspnet-core/",
+    "ASP.NET MVC": "aspnet-mvc/"
   },
   "platform": "ASP.NET WebForms",
   "samples": [

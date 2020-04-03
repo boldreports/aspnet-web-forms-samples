@@ -14,6 +14,9 @@ using System.Text;
 using Bold.Licensing;
 using System.IO;
 using BoldReports.Base.Logger;
+using BoldReports.Web;
+using Newtonsoft.Json;
+using System.Reflection;
 
 namespace ReportsWebFormsSamples
 {
@@ -26,6 +29,10 @@ namespace ReportsWebFormsSamples
             // Register Bold Reports license
             string License = File.ReadAllText(Server.MapPath("BoldLicense.txt"), Encoding.UTF8);
             BoldLicenseProvider.RegisterLicense(License);
+            ReportConfig.DefaultSettings = new ReportSettings()
+            {
+                MapSetting = this.GetMapSettings()
+            };
 
             // Code that runs on application startup
             GlobalConfiguration.Configure(WebApiConfig.Register);
@@ -117,6 +124,24 @@ namespace ReportsWebFormsSamples
             {
                 return null;
             }
+        }
+
+        private BoldReports.Web.MapSetting GetMapSettings()
+        {
+            try
+            {
+                string basePath = HttpContext.Current.Server.MapPath("~/Scripts");
+                return new MapSetting()
+                {
+                    ShapePath = basePath + "\\ShapeData\\",
+                    MapShapes = JsonConvert.DeserializeObject<List<MapShape>>(System.IO.File.ReadAllText(basePath + "\\ShapeData\\mapshapes.txt"))
+                };
+            }
+            catch (Exception ex)
+            {
+                LogExtension.LogError("Failed to Load Map Settings", ex, MethodBase.GetCurrentMethod());
+            }
+            return null;
         }
     }
 
