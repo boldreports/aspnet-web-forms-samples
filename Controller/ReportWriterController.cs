@@ -34,31 +34,35 @@ namespace ReportsWebFormsSamples.Controllers
                 string fileName = reportName.Contains("-") ? getName(reportName) : (char.ToUpper(reportName[0]) + reportName.Substring(1));
                 WriterFormat format;
                 HttpContext httpContext = System.Web.HttpContext.Current;
+                string resourcesPath = HttpContext.Current.Server.MapPath("~/Scripts");
                 ReportWriter reportWriter = new ReportWriter();
                 reportWriter.ReportProcessingMode = ProcessingMode.Remote;
+                reportWriter.ExportResources.UsePhantomJS = true;
+                reportWriter.ExportResources.PhantomJSPath = resourcesPath + @"\PhantomJS\";
                 reportWriter.ReportPath = HttpContext.Current.Server.MapPath("~/Resources/Report/" + reportName + ".rdl");
-
-
-                var resourcesPath = HttpContext.Current.Server.MapPath("~/Scripts");
 
                 reportWriter.ExportResources.Scripts = new List<string>
                 {
-                    resourcesPath + @"\bold-reports\common\bold.reports.common.min.js",
-                    resourcesPath + @"\bold-reports\common\bold.reports.widgets.min.js",
-                    //Chart component script
-                    resourcesPath + @"\bold-reports\data-visualization\ej.chart.min.js",
                     //Gauge component scripts
-                    resourcesPath + @"\bold-reports\data-visualization\ej.lineargauge.min.js",
-                    resourcesPath + @"\bold-reports\data-visualization\ej.circulargauge.min.js",
+                    "../../bold-reports/common/ej2-base.min.js",
+                    "../../bold-reports/common/ej2-pdf-export.min.js",
+                    "../../bold-reports/common/ej2-svg-base.min.js",
+                    "../../bold-reports/data-visualization/ej2-lineargauge.min.js",
+                    "../../bold-reports/data-visualization/ej2-circulargauge.min.js",
+
+                    "../../bold-reports/common/bold.reports.common.min.js",
+                    "../../bold-reports/common/bold.reports.widgets.min.js",
+                    //Chart component script
+                    "../../bold-reports/data-visualization/ej.chart.min.js",
                     //Map component script
-                    resourcesPath + @"\bold-reports\data-visualization\ej.map.min.js",
+                    "../../bold-reports/data-visualization/ej.map.min.js",
                     //Report Viewer Script
-                    resourcesPath + @"\bold-reports\bold.report-viewer.min.js"
+                    "../../bold-reports/bold.report-viewer.min.js"
                 };
 
                 reportWriter.ExportResources.DependentScripts = new List<string>
                 {
-                    resourcesPath + @"\dependent\jquery.min.js"
+                    "../../dependent/jquery.min.js"
                 };
 
                 if (type == "pdf")

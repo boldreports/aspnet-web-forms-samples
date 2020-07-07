@@ -2,7 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <form id="reportform" method="post" action="api" enctype="application/x-www-form-urlencoded">
+    <form class="r-w-form" id="reportform" method="post" action="api" enctype="application/x-www-form-urlencoded">
         <div class="r-w-container">
             <div class="r-w-sample-container">
                 <div class="r-w-samples">

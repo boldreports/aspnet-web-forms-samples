@@ -12,13 +12,27 @@
         function controlCreate() {
             designerInst = $(<%=designer.ClientID%>).data('boldReportDesigner');
             let reportName = getReportName();
-            designerInst.setModel({
-                reportType: 'RDLC',
-                previewReport: previewReport,
-                previewOptions: {
-                    exportItemClick: "onExportItemClick"
-                }
-            });
+            if (reportName == "load-large-data.rdlc") {
+                designerInst.setModel({
+                    reportType: 'RDLC',
+                    previewReport: previewReport,
+                    previewOptions: {
+                        exportItemClick: "onExportItemClick",
+                        toolbarSettings: {
+                            items: ej.ReportViewer.ToolbarItems.All & ~ej.ReportViewer.ToolbarItems.Export & ~ej.ReportViewer.ToolbarItems.Print
+                        }
+                    }
+                });
+            }
+            else {
+                designerInst.setModel({
+                    reportType: 'RDLC',
+                    previewReport: previewReport,
+                    previewOptions: {
+                        exportItemClick: "onExportItemClick"
+                    }
+                });
+            }
             if (reportName) {
                 designerInst.openReport(reportName);
             }
@@ -37,9 +51,11 @@
                 let reportPath = args.model.reportPath;
                 reportPath = reportPath.indexOf('//') !== -1 ? reportPath.substring(2) : reportPath
                 let reportNameWithoutExt = reportPath.split(".rdlc")[0];
-                datasource = rdlcData[reportNameWithoutExt];
+                if (reportNameWithoutExt != "load-large-data") {
+                    datasource = rdlcData[reportNameWithoutExt];
+                    args.dataSets = datasource;
+                }
                 args.cancelDataInputDialog = true;
-                args.dataSets = datasource;
             }
         }
 
