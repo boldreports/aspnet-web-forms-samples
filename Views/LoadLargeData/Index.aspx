@@ -1,0 +1,29 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="ReportsWebFormsSamples.Views.LoadLargeData.LoadLargeData" %>
+
+<%@ Register Assembly="BoldReports.WebForms" Namespace="BoldReports.WebForms" TagPrefix="Bold" %>
+
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+
+<Bold:ReportViewer runat="server" ID="Reports" OnClientReportLoaded="onReportLoaded" ReportPath="load-large-data.rdlc" 
+    processingMode="Local" ReportServiceUrl='<%# Globals.SERVICE_URL %>' OnClientToolbarRendering="onToolbarRendering" OnClientToolBarItemClick="onToolBarItemClick" OnClientExportItemClick="onExportItemClick"></Bold:ReportViewer>
+   
+    <script>
+        function onReportLoaded(args) {
+       }
+    </script>
+
+</asp:Content>
+
+<asp:content ID="descriptionContent" ContentPlaceHolderID="description" runat="server">
+
+       <div id="description">
+        <p>
+            This demos allows you to view the sales order details <b>RDLC</b> with <code>large data</code> using the table report item.
+        </p>
+        <p>
+            More information about RDLC report can be found in this <a href="https://documentation.boldreports.com/aspnet-web-forms/report-viewer/rdlc-report/" target="_blank">documentation</a> section.
+        </p>
+
+    </div>
+
+</asp:content>

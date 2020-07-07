@@ -8,6 +8,8 @@ using System.Web.Http;
 using BoldReports.Web;
 using BoldReports.Web.ReportViewer;
 using BoldReports.Base.Logger;
+using ReportsWebFormsSamples.Models;
+using System.Data;
 
 namespace ReportsWebFormsSamples.Controllers
 {
@@ -38,6 +40,11 @@ namespace ReportsWebFormsSamples.Controllers
             if (directoryName.Length <= 0)
             {
                 reportOption.ReportModel.ReportPath = HttpContext.Current.Server.MapPath(resourceRootLoc + reportName);
+            }
+            if (reportName == "load-large-data.rdlc")
+            {
+                SqlQuery.getJson();
+                reportOption.ReportModel.DataSources.Add(new ReportDataSource("SalesOrderDetail", HttpContext.Current.Cache.Get("SalesOrderDetail") as DataTable));
             }
         }
 
