@@ -81,7 +81,7 @@ namespace ReportsWebFormsSamples.Controllers
                 foreach (var file in Directory.GetFiles(targetFolder, "*" + reportTypeExt))
                 {
                     CatalogItem catalogItem = new CatalogItem();
-                    catalogItem.Name = Path.GetFileName(file);
+                    catalogItem.Name = Path.GetFileNameWithoutExtension(file);
                     catalogItem.Type = ItemTypeEnum.Report;
                     catalogItem.Id = Regex.Replace(catalogItem.Name, @"[^0-9a-zA-Z]+", "_");
                     _items.Add(catalogItem);
@@ -100,7 +100,7 @@ namespace ReportsWebFormsSamples.Controllers
         {
             string reportBasePath = @"Resources\Report\";
             string targetFolder = HttpContext.Current.Server.MapPath("~/") + reportBasePath;
-            string reportPath = targetFolder + this.ReportPath;
+            string reportPath = Path.HasExtension(this.ReportPath) ? targetFolder + this.ReportPath : targetFolder + this.ReportPath + "." + this.reportType.ToLower();
 
             if (File.Exists(reportPath))
             {

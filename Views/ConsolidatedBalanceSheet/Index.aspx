@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="ReportsWebFormsSamples.Views.ProductCatalog.ProductCatalog" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="ReportsWebFormsSamples.Views.ConsolidatedBalanceSheet.ConsolidatedBalanceSheet" %>
 
 <%@ Register Assembly="BoldReports.WebForms" Namespace="BoldReports.WebForms" TagPrefix="Bold" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-<Bold:ReportViewer runat="server" ID="Reports" OnClientReportLoaded="onReportLoaded" ReportPath="product-catalog.rdlc" 
+<Bold:ReportViewer runat="server" ID="Reports" OnClientReportLoaded="onReportLoaded" ReportPath="consolidated-balance-sheet.rdlc" 
     processingMode="Local" ReportServiceUrl='<%# Globals.SERVICE_URL %>' OnClientToolbarRendering="onToolbarRendering" OnClientToolBarItemClick="onToolBarItemClick" OnClientExportItemClick="onExportItemClick"></Bold:ReportViewer>
    
     <script>
@@ -21,12 +21,17 @@
 
        <div id="description">
         <p>
-            This report shows Mountain bike products information using the <a
+            Consolidated balance sheet RDLC report represents the assets and liabilities of a company and all subsidiaries
+            for the last four quarters in a single sheet using <a
                 href="https://help.boldreports.com/on-premise/report-designer/report-items/tablix/"
-                target="_blank">Tablix</a> report item in RDLC report.
+                target="_blank">Tablix</a> report item.
         </p>
         <ul>
-            <li>The table is displayed with Product no, image, name, size, weight and cost.</li>
+            <li>The <a href="https://help.boldreports.com/on-premise/report-designer/report-items/tablix/grouping-panel/"
+                    target="_blank">Row grouping</a> feature is used to group the Assets type.</li>
+            <li>Text box report items with currency value are formatted using <a
+                    href="https://help.boldreports.com/on-premise/report-designer/compose-report/properties-panel/#set-expression"
+                    target="_blank">expression</a>.</li>
             <li>The data used in this table is a local JSON data.</li>
         </ul>
         <p>

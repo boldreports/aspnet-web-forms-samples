@@ -11,18 +11,23 @@
             {
                 string basePath = Page.ResolveUrl("~/");
                 var sample = data.samples[i];
-                string imageClassName = (bool)sample.imageDetails.isLandscape ? "ej-landscape-img" : "ej-portrait-img";
-                string bgPosition = "background-position-y:" + (-((bool)sample.imageDetails.isLandscape ? (Int32)sample.imageDetails.index * 70 :
+                var isLandscape = (bool)sample.imageDetails.isLandscape;
+                string imageClassName = isLandscape ? "ej-landscape-img" : "ej-portrait-img";
+                string bgPosition = "background-position-y:" + (-( isLandscape ? (Int32)sample.imageDetails.index * 70 :
                 (Int32)sample.imageDetails.index * 120)) + "px";
-
+                
+                string status = (string)sample.status ;
                 { %>
-        <div class="ej-sb-toc-card" onclick="onTocClick({index:'<%= i %>', e:event})" tabindex="-1">
-            <div class="<%= imageClassName %>" style="<%= bgPosition %>"></div>
-            <div class="ej-sb-toc-title"><%=  sample.sampleName %></div>
+                <div class="ej-sb-toc-card" onclick="onTocClick({index:'<%= i %>', e:event})" tabindex="-1">
+                <div class="<%= imageClassName %>" style="<%= bgPosition %>"></div>
+                <div class="ej-sb-toc-title"><%=  sample.sampleName %></div>
+                <%if (!String.IsNullOrEmpty(status) && (status.ToUpper() == "UPDATED" || status.ToUpper() == "NEW"))
+                    {%>
+                       <span class="<%= isLandscape ? "ej-landscape" : "ej-portrait"%> ej-status-label ej-<%=@status.ToLower()%> "><%= status.ToUpper()%></span>
+                <%} %>
+
         </div>
-        <% }
-            }
-        %>
+        <% }} %>
     </div>
 </div>
 
