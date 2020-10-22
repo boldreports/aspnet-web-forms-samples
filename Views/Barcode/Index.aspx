@@ -14,11 +14,17 @@
 
     <div id="description">
         <p>
-            Custom Report Item allows you to add the functionality that is not natively supported in the RDL or extend
-            the functionality of
-            existing controls in the RDL standard. This demo showcases the supported one-dimensional and two-dimensional
-            barcode types rendered
-            in Bold Reports Report Viewer through Custom Report Item.
+            Custom Report Item allows you to add the functionality that is not natively supported in the RDL or extend the
+            functionality of existing controls in the RDL standard.
+        </p>
+        <p>
+            This report showcases the one-dimensional and two-dimensional barcode types rendered in our Report Viewer
+            through Custom Report Item.
+        </p>
+        <p>
+            More information about Barcode can be found in this <a
+                href="https://help.boldreports.com/on-premise/report-designer/report-items/barcode/"
+                target="_blank">documentation</a> section.
         </p>
     </div>
 

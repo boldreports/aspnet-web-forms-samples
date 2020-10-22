@@ -87,12 +87,12 @@ namespace ReportsWebFormsSamples.Views
             switch ((string)sampleData.basePath)
             {
                 case "ReportViewer":
-                    metaContent = "The ASP.NET WebForms bold report viewer allows the end-users to visualize the " + title + " report in browsers.";
+                    metaContent = "The ASP.NET WebForms Bold Report Viewer allows the end-users to visualize the " + title + " report in browsers.";
                     title += " | Preview | ASP.NET Webforms Report Viewer";
                     break;
                 case "ReportWriter":
                     title += " | Preview | ASP.NET Webforms Report Writer";
-                    metaContent = "The ASP.NET WebForms bold report writer allows the end-users to download the report in browsers without visualizing the report.";
+                    metaContent = "The ASP.NET WebForms Bold Report Writer allows the end-users to download the report in browsers without visualizing the report.";
                     break;
                 default:
                     title = "";
@@ -109,7 +109,8 @@ namespace ReportsWebFormsSamples.Views
             string title = String.IsNullOrEmpty((string)sampleData.metaData.title) ? sampleData.sampleName : sampleData.metaData.title;
             string metaContent = "The ASP.NET WebForms bold report designer allows the end-users to arrange/customize the reports appearance in browsers." +
                         "It helps to edit the " + title + " for customer\"s application needs.";
-            title = title + " | ASP.NET Webforms Report Designer | Bold Reports";
+            title += " | ASP.NET Webforms Report Designer";
+            title = title.Length < 45 ? title += " | Bold Reports" : title;
             return new MetaDataInfo(title, metaContent);
         }
 

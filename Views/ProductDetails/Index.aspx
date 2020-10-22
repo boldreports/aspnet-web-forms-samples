@@ -21,15 +21,15 @@
             <li>Custom barcode report item is placed in a table cell to display the <code>ProductId</code>.</li>
             <li>The total price value of each product is calculated based on the <code>OrderQty</code> and
                 <code>UnitPrice</code> data fields using <a
-                    href="https://documentation.boldreports.com/on-premise/report-designer/compose-report/properties-panel/#set-expression"
+                    href="https://help.boldreports.com/on-premise/report-designer/compose-report/properties-panel/#set-expression"
                     target="_blank">expression</a>.</li>
             <li>The price values in the product details are formatted in the <b>Currency </b> <a
-                    href="https://documentation.boldreports.com/on-premise/report-designer/compose-report/format-data/"
+                    href="https://help.boldreports.com/on-premise/report-designer/compose-report/format-data/"
                     target="_blank">format</a> to improve the readability of data.</li>
         </ul>
         <p>
             More information about the Tablix data region can be found in this <a
-                href="https://documentation.boldreports.com/on-premise/report-designer/report-items/tablix/"
+                href="https://help.boldreports.com/on-premise/report-designer/report-items/tablix/"
                 target="_blank">documentation</a> section.
         </p>
     </div>

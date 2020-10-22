@@ -14,6 +14,7 @@
     loadTabContent();
     setReportsHeight();
     updateTab();
+    $('a[data-toggle="tab"][href="#demo"]').on('shown.bs.tab', resizeReportViewer);
 })();
 
 window.addEventListener('resize', function () {
@@ -51,6 +52,8 @@ function updateSampleDetails() {
     let metaDescriptionElement = document.querySelector('.ej-main-body-content .ej-meta-description');
     titleElement.innerText = reportSampleData.sampleName;
     metaDescriptionElement.innerText = reportSampleData.metaData.description;
+    document.querySelector("meta[property='og:title']").setAttribute('content', document.title);
+    document.querySelector("meta[name='description']").setAttribute('property', 'og:description');
 }
 
 function setReportsHeight() {
@@ -94,4 +97,9 @@ function getResponse(url) {
         url: url,
         async: false
     }).responseText;
+}
+
+function resizeReportViewer() {
+    let reportViewerElement = document.querySelector('.e-reportviewer.e-js');
+    if (reportViewerElement) $(reportViewerElement).trigger('resize');
 }

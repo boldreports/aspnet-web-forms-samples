@@ -20,8 +20,9 @@
         "isLandscape": false,
         "index": 7
       },
+      "status": "",
       "metaData": {
-        "description": "The Product Line Sales report displays sales details organized by category and subcategory of products using cascading parameters in ASP.NET WebForms bold report viewer."
+        "description": "The Product Line Sales report displays sales details organized by category and subcategory of products using cascading parameters in ASP.NET WebForms Bold Report Viewer."
       }
     },
     {
@@ -32,8 +33,9 @@
         "isLandscape": true,
         "index": 1
       },
+      "status": "",
       "metaData": {
-        "description": "Company Sales report shows product sales against year in matrix format using SSRS Tablix report item in ASP.NET WebForms bold report viewer."
+        "description": "Company Sales report shows product sales against year in matrix format using SSRS Tablix report item in ASP.NET WebForms Bold Report Viewer."
       }
     },
     {
@@ -45,7 +47,7 @@
         "index": 3
       },
       "metaData": {
-        "description": "Mail merge shows to envelope the employee details using SRSS List report item in ASP.NET WebForms bold report viewer."
+        "description": "Mail merge shows to envelope the employee details using SRSS List report item in ASP.NET WebForms Bold Report Viewer."
       }
     },
     {
@@ -57,7 +59,7 @@
         "index": 9
       },
       "metaData": {
-        "description": "This demo shows the sales order details using RDL basic table with currency formatting in price textbox fields in ASP.NET WebForms bold report viewer."
+        "description": "This demo shows the sales order details using RDL basic table with currency formatting in price textbox fields in ASP.NET WebForms Bold Report Viewer."
       }
     },
     {
@@ -69,7 +71,7 @@
         "index": 5
       },
       "metaData": {
-        "description": "This demo shows the sales territory and its total sales using drilldown with  SSRS matrix report in ASP.NET WebForms bold report viewer."
+        "description": "This demo shows the sales territory and its total sales using drilldown with  SSRS matrix report in ASP.NET WebForms Bold Report Viewer."
       }
     },
     {
@@ -81,7 +83,7 @@
         "index": 0
       },
       "metaData": {
-        "description": "This demo shows the customer details in SSRS table report item and details are highlighted based on conditional row formatting in ASP.NET WebForms bold report viewer. "
+        "description": "This demo shows the customer details in SSRS table report item and details are highlighted based on conditional row formatting in ASP.NET WebForms Bold Report Viewer. "
       }
     },
     {
@@ -93,7 +95,7 @@
         "index": 0
       },
       "metaData": {
-        "description": "The barcode demo shows the available 1D, 2D and QR barcode types rendered in ASP.NET WebForms bold report viewer through RDL Custom Report Item."
+        "description": "The barcode demo shows the available 1D, 2D and QR barcode types rendered in ASP.NET WebForms Bold Report Viewer through RDL Custom Report Item."
       }
     },
     {
@@ -105,7 +107,7 @@
         "index": 1
       },
       "metaData": {
-        "description": "This demo shows customer support analysis with SSRS drill through to explore details in another report based on user click action in ASP.NET WebForms bold report viewer."
+        "description": "This demo shows customer support analysis with SSRS drill through to explore details in another report based on user click action in ASP.NET WebForms Bold Report Viewer."
       }
     },
     {
@@ -117,7 +119,7 @@
         "index": 10
       },
       "metaData": {
-        "description": "This RDL template shows the ticket sales analysis details of movie tickets using SSRS data region report items like chart and table in ASP.NET WebForms bold report viewer."
+        "description": "This RDL template shows the ticket sales analysis details of movie tickets using SSRS data region report items like chart and table in ASP.NET WebForms Bold Report Viewer."
       }
     },
     {
@@ -129,7 +131,7 @@
         "index": 11
       },
       "metaData": {
-        "description": "This RDL report template shows website visitor analysis details using SSRS column chart, pie chart, line chart and table data item in ASP.NET WebForms bold report viewer."
+        "description": "This RDL report template shows website visitor analysis details using SSRS column chart, pie chart, line chart and table data item in ASP.NET WebForms Bold Report Viewer."
       }
     },
     {
@@ -141,7 +143,7 @@
         "index": 3
       },
       "metaData": {
-        "description": "This demo shows the patient analysis report of a health care using SSRS doughnut chart, line chart and basic table data regions in ASP.NET WebForms bold report viewer."
+        "description": "This demo shows the patient analysis report of a health care using SSRS doughnut chart, line chart and basic table data regions in ASP.NET WebForms Bold Report Viewer."
       }
     },
     {
@@ -153,7 +155,7 @@
         "index": 5
       },
       "metaData": {
-        "description": "This report shows personal expense analysis details using SSRS image, text box, line, rectangle, chart and table report items in ASP.NET WebForms bold report viewer."
+        "description": "This report shows personal expense analysis details using SSRS image, text box, line, rectangle, chart and table report items in ASP.NET WebForms Bold Report Viewer."
       }
     },
     {
@@ -165,7 +167,7 @@
         "index": 4
       },
       "metaData": {
-        "description": "This demo shows the product and suppliers details using SSRS pyramid, bar, column charts and table widget in ASP.NET WebForms bold report viewer.",
+        "description": "This demo shows the product and suppliers details using SSRS pyramid, bar, column charts and table widget in ASP.NET WebForms Bold Report Viewer.",
         "title": "Northwind Products Report"
       }
     },
@@ -178,7 +180,7 @@
         "index": 4
       },
       "metaData": {
-        "description": "This report template shows the sales order details based on order number using the RDL report parameters, rectangle, line and table in ASP.NET WebForms bold report viewer."
+        "description": "This report template shows the sales order details based on order number using the RDL report parameters, rectangle, line and table in ASP.NET WebForms Bold Report Viewer."
       }
     },
     {
@@ -190,7 +192,7 @@
         "index": 2
       },
       "metaData": {
-        "description": "This demo shows the sales invoice details and the usage of report viewer parameters, expressions, and calculated fields using SSRS Tablix report item in ASP.NET WebForms bold report viewer."
+        "description": "This demo shows the sales invoice details and the usage of report viewer parameters, expressions, and calculated fields using SSRS Tablix report item in ASP.NET WebForms Bold Report Viewer."
       }
     },
     {
@@ -202,7 +204,7 @@
         "index": 6
       },
       "metaData": {
-        "description": "This demos allows you to view the product catalog RDLC that exist on the local file system with JSON array and custom business object data collection in ASP.NET WebForms bold report viewer."
+        "description": "This demos allows you to view the product catalog RDLC that exist on the local file system with JSON array and custom business object data collection in ASP.NET WebForms Bold Report Viewer."
       }
     },
     {
@@ -214,7 +216,7 @@
         "index": 8
       },
       "metaData": {
-        "description": "This demos allows you to view the sales by year RDLC that exist on the local file system with JSON array and custom business object data collection in ASP.NET WebForms bold report viewer."
+        "description": "This demos allows you to view the sales by year RDLC that exist on the local file system with JSON array and custom business object data collection in ASP.NET WebForms Bold Report Viewer."
       }
     },
     {
@@ -226,7 +228,7 @@
         "index": 2
       },
       "metaData": {
-        "description": "This demo shows product sales total based on  quarterly wise RDL tablix grouping in ASP.NET WebForms bold report viewer."
+        "description": "This demo shows product sales total based on  quarterly wise RDL tablix grouping in ASP.NET WebForms Bold Report Viewer."
       }
     },
     {
@@ -238,7 +240,7 @@
         "index": 6
       },
       "metaData": {
-        "description": "This demo shows the product details using the SSRS table report item with barcodes rendered in ASP.NET WebForms bold report viewer through RDL Custom Report Item."
+        "description": "This demo shows the product details using the SSRS table report item with barcodes rendered in ASP.NET WebForms Bold Report Viewer through RDL Custom Report Item."
       }
     },
     {
@@ -250,7 +252,19 @@
         "index": 9
       },
       "metaData": {
-        "description": "This demo shows the sales order details using RDLC basic table with currency formatting in price textbox fields in ASP.NET WebForms bold report viewer."
+        "description": "This demo shows 100,000 records of sales order details using Tablix with currency formatting in ASP.NET WebForms Bold Report Viewer."
+      }
+    },
+    {
+      "routerPath": "ConsolidatedBalanceSheet",
+      "sampleName": "Consolidated Balance Sheet",
+      "basePath": "ReportViewer",
+      "imageDetails": {
+        "isLandscape": false,
+        "index": 12
+      },
+      "metaData": {
+        "description": "This demos allows shows the consolidated balance sheet RDLC report represents the assets and liabilities of a company in ASP.NET WebForms Bold Report Viewer."
       }
     },
     {
@@ -262,7 +276,7 @@
         "index": 7
       },
       "metaData": {
-        "description": "This demos allows you to export the RDL or RDLC report with popular file formats like PDF, HTML, Microsoft Word, and Microsoft Excel without previewing the report in viewer using ASP.NET WebForms bold report writer."
+        "description": "This demos allows you to export the RDL(C) report with PDF, Word, and more file formats without previewing it in viewer using ASP.NET WebForms Bold Report Writer."
       }
     }
   ]

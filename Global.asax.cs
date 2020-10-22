@@ -32,12 +32,26 @@ namespace ReportsWebFormsSamples
             ReportConfig.DefaultSettings = new ReportSettings()
             {
                 MapSetting = this.GetMapSettings()
-            };
+            }.RegisterExtensions(this.GetDataExtension());
 
             // Code that runs on application startup
             GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+        }
+
+        private List<string> GetDataExtension()
+        {
+            var extensions = !string.IsNullOrEmpty(System.Configuration.ConfigurationManager.AppSettings["ExtAssemblies"]) ? System.Configuration.ConfigurationManager.AppSettings["ExtAssemblies"] : string.Empty;
+            try
+            {
+                return new List<string>(extensions.Split(new string[] { ";" }, StringSplitOptions.RemoveEmptyEntries));
+            }
+            catch (Exception ex)
+            {
+                LogExtension.LogError("Failed to Load Data Extension", ex, MethodBase.GetCurrentMethod());
+            }
+            return null;
         }
 
         ReportSample getSampleData(string reportBasePath, string reportRouterPath, ReportSample sampleData)
