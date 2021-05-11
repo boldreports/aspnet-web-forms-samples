@@ -43,38 +43,44 @@
                         </select>
                     </div>
                 </div>
-                <input type="text" style="display:none" name="reportName" />
+                <input type="text" style="display: none" name="reportName" />
                 <input class="r-w-genearte e-button e-js e-ntouch e-btn-normal e-btn e-select e-widget"
                     onclick="onSubmitBtnClick()" type="submit" value="Generate" />
+                <% if (!ReportsWebFormsSamples.Models.Globals.isPhatomJSExist)
+                    { %>
+                <div class="alert alert-warning alert-dismissible" role="alert">
+                    Data Visualization report items will not be exported properly since <a href="https://phantomjs.org/" target="_blank">PhanthomJS</a> was not found in this application.
+                   
+                </div>
+                <%}  %>
             </div>
         </div>
-    <script>
-        let reportNameInputele = document.querySelector('[name=reportName]');
-        reportNameInputele.value = 'company-sales';
-        function onSampleClick(args) {
-            let prevEle = document.querySelector('.r-w-sample-active');
-            if (prevEle) {
-                prevEle.classList.remove('r-w-sample-active');
+        <script>
+            let reportNameInputele = document.querySelector('[name=reportName]');
+            reportNameInputele.value = 'company-sales';
+            function onSampleClick(args) {
+                let prevEle = document.querySelector('.r-w-sample-active');
+                if (prevEle) {
+                    prevEle.classList.remove('r-w-sample-active');
+                }
+                args.event.currentTarget.classList.add('r-w-sample-active');
+                reportNameInputele.value = args.name;
             }
-            args.event.currentTarget.classList.add('r-w-sample-active');
-            reportNameInputele.value = args.name;
-        }
 
-        function onSubmitBtnClick() {
-            let reportFormElement = document.getElementById('reportform');
-            let reportType = document.getElementById("dropdown").value;
-            reportFormElement.action = getBasePath() + 'api/ReportWriter/generate?reportName=' + reportNameInputele.value + '&type=' + reportType;
-        }
+            function onSubmitBtnClick() {
+                let reportFormElement = document.getElementById('reportform');
+                let reportType = document.getElementById("dropdown").value;
+                reportFormElement.action = getBasePath() + 'api/ReportWriter/generate?reportName=' + reportNameInputele.value + '&type=' + reportType;
+            }
 
-        $(function () {
-            $('#dropdown').ejDropDownList({
-                minPopupHeight: 190,
-                watermarkText: "  File Types",
-                selectedIndex: 0
+            $(function () {
+                $('#dropdown').ejDropDownList({
+                    minPopupHeight: 190,
+                    watermarkText: "  File Types",
+                    selectedIndex: 0
+                });
             });
-        });
-    </script>
-
+        </script>
 </asp:Content>
 
 <asp:Content ID="descriptionContent" ContentPlaceHolderID="description" runat="server">

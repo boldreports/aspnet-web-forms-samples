@@ -24,10 +24,10 @@ namespace ReportsWebFormsSamples.Views.Designer
             });
             this.designer.ReportItemExtensions.Add(new ReportItemExtensionsModule()
             {
-                Name = "qrbarcode",
+                Name = "matrixbarcode",
                 ClassName = "EJQRBarcode",
                 ImageClass = "customitem-qrbarcode",
-                DisplayName = "QR Barcode",
+                DisplayName = "2D Barcode",
                 Category = "Barcodes"
             });
 

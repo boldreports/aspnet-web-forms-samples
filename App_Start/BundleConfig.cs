@@ -40,10 +40,7 @@ namespace ReportsWebFormsSamples
                       "~/Scripts/bold-reports/common/bold.reports.widgets.min.js",
                       "~/Scripts/bold-reports/bold.report-viewer.min.js",
                       "~/Scripts/bold-reports/data-visualization/ej.bulletgraph.min.js",
-                      "~/Scripts/bold-reports/data-visualization/ej.chart.min.js",
-                      "~/Scripts/bold-reports/data-visualization/ej.circulargauge.min.js",
-                      "~/Scripts/bold-reports/data-visualization/ej.lineargauge.min.js",
-                      "~/Scripts/bold-reports/data-visualization/ej.map.min.js"));
+                      "~/Scripts/bold-reports/data-visualization/ej.chart.min.js"));
 
             //App scripts for SB main samples
             bundles.Add(new ScriptBundle("~/bundles/main/app").Include(
@@ -90,10 +87,7 @@ namespace ReportsWebFormsSamples
                       "~/Scripts/extensions/barcode.js",
                       "~/Scripts/extensions/qrbarcode.js",
                       "~/Scripts/bold-reports/data-visualization/ej.bulletgraph.min.js",
-                      "~/Scripts/bold-reports/data-visualization/ej.chart.min.js",
-                      "~/Scripts/bold-reports/data-visualization/ej.circulargauge.min.js",
-                      "~/Scripts/bold-reports/data-visualization/ej.lineargauge.min.js",
-                      "~/Scripts/bold-reports/data-visualization/ej.map.min.js"));
+                      "~/Scripts/bold-reports/data-visualization/ej.chart.min.js"));
 
             //App scripts for SB preview samples
             bundles.Add(new ScriptBundle("~/bundles/preview/app").Include(

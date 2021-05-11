@@ -23,7 +23,7 @@
                 <div class="ej-sb-toc-title"><%=  sample.sampleName %></div>
                 <%if (!String.IsNullOrEmpty(status) && (status.ToUpper() == "UPDATED" || status.ToUpper() == "NEW"))
                     {%>
-                       <span class="<%= isLandscape ? "ej-landscape" : "ej-portrait"%> ej-status-label ej-<%=@status.ToLower()%> "><%= status.ToUpper()%></span>
+                        <span class="<%= isLandscape ? "ej-landscape" : "ej-portrait"%> ej-status-label ej-<%=@status.ToLower()%>"><%= status%></span>
                 <%} %>
 
         </div>
