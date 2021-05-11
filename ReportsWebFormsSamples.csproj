@@ -148,6 +148,15 @@
     <Reference Include="Microsoft.AspNet.FriendlyUrls">
       <HintPath>packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
     </Reference>
+    <Reference Include="BoldReports.Data.MySQL">
+      <HintPath>packages\BoldReports.Data.MySQL.3.1.31\lib\net45\BoldReports.Data.MySQL.dll</HintPath>
+    </Reference>
+    <Reference Include="BoldReports.Data.Oracle">
+      <HintPath>packages\BoldReports.Data.Oracle.3.1.31\lib\net45\BoldReports.Data.Oracle.dll</HintPath>
+    </Reference>
+    <Reference Include="BoldReports.Data.PostgreSQL">
+      <HintPath>packages\BoldReports.Data.PostgreSQL.3.1.31\lib\net45\BoldReports.Data.PostgreSQL.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Diagnostics.DiagnosticSource">
