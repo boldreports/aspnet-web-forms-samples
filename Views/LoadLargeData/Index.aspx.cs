@@ -13,7 +13,7 @@ namespace ReportsWebFormsSamples.Views.LoadLargeData
         protected void Page_Load(object sender, EventArgs e)
         {
             this.Reports.ToolbarSettings = new BoldReports.Models.ReportViewer.ToolbarSettings();
-            this.Reports.ToolbarSettings.Items = BoldReports.ReportViewerEnums.ToolbarItems.All & ~BoldReports.ReportViewerEnums.ToolbarItems.Export & ~BoldReports.ReportViewerEnums.ToolbarItems.Print;
+            this.Reports.ToolbarSettings.Items = BoldReports.ReportViewerEnums.ToolbarItems.All & ~BoldReports.ReportViewerEnums.ToolbarItems.Export & ~BoldReports.ReportViewerEnums.ToolbarItems.Print & ~BoldReports.ReportViewerEnums.ToolbarItems.ExportSetup;
         }
     }
 }

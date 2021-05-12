@@ -32,6 +32,7 @@
     <%: Styles.Render("~/Content/preview") %>
 </head>
 <body>
+    <div hidden id="reports-analytics" data-queue="Bold Reports - Demos - ASP.NET WebForms"></div>
     <form id="reportform" runat="server">
         <div class="splash">
             <div class="message">ASP.NET Webforms Reports</div>

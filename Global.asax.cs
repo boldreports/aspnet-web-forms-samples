@@ -28,7 +28,7 @@ namespace ReportsWebFormsSamples
             BoldReports.Base.Logger.LogExtension.RegisterLog4NetConfig();
             // Register Bold Reports license
             string License = File.ReadAllText(Server.MapPath("BoldLicense.txt"), Encoding.UTF8);
-            BoldLicenseProvider.RegisterLicense(License);
+            BoldLicenseProvider.RegisterLicense(License, bool.Parse(System.Configuration.ConfigurationManager.AppSettings["IsOfflineLicense"]));
             ReportConfig.DefaultSettings = new ReportSettings()
             {
                 MapSetting = this.GetMapSettings()

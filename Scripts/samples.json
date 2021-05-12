@@ -268,12 +268,25 @@
       }
     },
     {
+      "routerPath": "Paystub",
+      "sampleName": "Paystub ",
+      "basePath": "ReportViewer",
+      "imageDetails": {
+        "isLandscape": true,
+        "index": 7
+      },
+      "status": "New",
+      "metaData": {
+        "description": "This demos shows the Paystub report represents the payslip of a company in ASP.NET WebForms Bold Report Viewer."
+      }
+    },
+    {
       "routerPath": "",
       "sampleName": "Report Writer",
       "basePath": "ReportWriter",
       "imageDetails": {
         "isLandscape": true,
-        "index": 7
+        "index": 8
       },
       "metaData": {
         "description": "This demos allows you to export the RDL(C) report with PDF, Word, and more file formats without previewing it in viewer using ASP.NET WebForms Bold Report Writer."
