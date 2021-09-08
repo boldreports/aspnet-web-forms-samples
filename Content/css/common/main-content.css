@@ -42,18 +42,18 @@
                 padding: 0 12px;
                 display: flex;
                 align-items: center;
-                color: #000;
+                color: #2b3a5c;
                 border-bottom: 2px solid transparent;
             }
 
                 .ej-main-body-content .ej-nav-header .ej-nav-item a:hover {
-                    color: #0278d7;
+                    color: #2b3a5c;
                     text-decoration: none;
                 }
 
                 .ej-main-body-content .ej-nav-header .ej-nav-item a.active {
-                    color: #0278d7;
-                    border-color: #0278d7;
+                    color: #ff5f23;
+                    border-color: #ff5f23;
                 }
 
     .ej-main-body-content .ej-tab-content .tab-pane {
@@ -64,6 +64,7 @@
             font-size: 14px;
             margin: 20px 0 15px 15px;
         }
+
 
 @keyframes slideleft {
     from {
@@ -96,7 +97,6 @@
         margin-right: 5px;
         font-size: 20px;
     }
-
 .ej-main-body-content #parentTab .ej-description-icon {
     margin-bottom: -2px;
 }
@@ -159,4 +159,8 @@
     height: 320px;
     font-size: 13px;
     font-weight: 400;
+}
+
+.ej-main-body-content #parentTab .ej-sb-icons{
+    color: #333;
 }
