@@ -148,15 +148,6 @@
     <Reference Include="Microsoft.AspNet.FriendlyUrls">
       <HintPath>packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
     </Reference>
-    <Reference Include="BoldReports.Data.MySQL">
-      <HintPath>packages\BoldReports.Data.MySQL.3.2.22\lib\net45\BoldReports.Data.MySQL.dll</HintPath>
-    </Reference>
-    <Reference Include="BoldReports.Data.Oracle">
-      <HintPath>packages\BoldReports.Data.Oracle.3.2.22\lib\net45\BoldReports.Data.Oracle.dll</HintPath>
-    </Reference>
-    <Reference Include="BoldReports.Data.PostgreSQL">
-      <HintPath>packages\BoldReports.Data.PostgreSQL.3.2.22\lib\net45\BoldReports.Data.PostgreSQL.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Diagnostics.DiagnosticSource">
@@ -823,5 +814,6 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    </Target>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
 </Project>
