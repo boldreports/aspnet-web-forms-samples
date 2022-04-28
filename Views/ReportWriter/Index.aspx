@@ -9,7 +9,7 @@
                     <div class="r-w-samples-portrait">
                         <div class="r-w-sample r-w-sample-portrait"
                             onclick="onSampleClick({event: event, name:'website-visitor-analysis'})">
-                            <img class="r-w-sample-image" style="background-position-y: -2400px" />
+                            <img class="r-w-sample-image" style="background-position-y: -2640px" />
                             <div class="r-w-sample-title">Website Visitor Analysis</div>
                         </div>
                         <div class="r-w-sample r-w-sample-portrait"
@@ -19,7 +19,7 @@
                         </div>
                         <div class="r-w-sample r-w-sample-portrait"
                             onclick="onSampleClick({event: event, name:'sales-report'})">
-                            <img class="r-w-sample-image" style="background-position-y: 960px" />
+                            <img class="r-w-sample-image" style="background-position-y: 1200px" />
                             <div class="r-w-sample-title">Sales Report</div>
                         </div>
                     </div>
@@ -51,6 +51,7 @@
                             <option value="csv">CSV</option>
                             <option value="html">HTML</option>
                             <option value="ppt">PowerPoint</option>
+                            <option value="xml">XML</option>
                         </select>
                     </div>
                 </div>

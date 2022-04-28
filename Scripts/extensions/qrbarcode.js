@@ -13,7 +13,7 @@ var EJQRBarcode = (function () {
         args.defaultHeight = 160;
         args.defaultWidth = 160;
         args.minimumHeight = 15;
-        args.minimumWidth = 90;
+        args.minimumWidth = 15;
         args.renderCallback = $.proxy(this.renderData, this);
         args.loadingCallback = $.proxy(this.showIndicator, this);
     };

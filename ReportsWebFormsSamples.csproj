@@ -49,29 +49,29 @@
       <HintPath>packages\BarcodeLib.1.3.0.0\lib\net20\BarcodeLib.dll</HintPath>
     </Reference>
     <Reference Include="Bold.Licensing">
-      <HintPath>packages\Bold.Licensing.3.3.23\lib\net45\Bold.Licensing.dll</HintPath>
+      <HintPath>packages\Bold.Licensing.4.1.78\lib\net45\Bold.Licensing.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="BoldReports.CRI.Barcode">
-      <HintPath>packages\BoldReports.CRI.Barcode.3.3.23\lib\net45\BoldReports.CRI.Barcode.dll</HintPath>
+      <HintPath>packages\BoldReports.CRI.Barcode.4.1.78\lib\net45\BoldReports.CRI.Barcode.dll</HintPath>
     </Reference>
     <Reference Include="BoldReports.Data.SSAS">
-      <HintPath>packages\BoldReports.Data.SSAS.3.3.23\lib\net45\BoldReports.Data.SSAS.dll</HintPath>
+      <HintPath>packages\BoldReports.Data.SSAS.4.1.78\lib\net45\BoldReports.Data.SSAS.dll</HintPath>
     </Reference>
     <Reference Include="BoldReports.Web">
-      <HintPath>packages\BoldReports.Web.3.3.23\lib\net45\BoldReports.Web.dll</HintPath>
+      <HintPath>packages\BoldReports.Web.4.1.78\lib\net45\BoldReports.Web.dll</HintPath>
     </Reference>
     <Reference Include="BoldReports.Data.WebData">
-      <HintPath>packages\BoldReports.Data.WebData.3.3.23\lib\net45\BoldReports.Data.WebData.dll</HintPath>
+      <HintPath>packages\BoldReports.Data.WebData.4.1.78\lib\net45\BoldReports.Data.WebData.dll</HintPath>
     </Reference>
     <Reference Include="BoldReports.Data.Csv">
-      <HintPath>packages\BoldReports.Data.Csv.3.3.23\lib\net45\BoldReports.Data.Csv.dll</HintPath>
+      <HintPath>packages\BoldReports.Data.Csv.4.1.78\lib\net45\BoldReports.Data.Csv.dll</HintPath>
     </Reference>
     <Reference Include="BoldReports.Data.Excel">
-      <HintPath>packages\BoldReports.Data.Excel.3.3.23\lib\net45\BoldReports.Data.Excel.dll</HintPath>
+      <HintPath>packages\BoldReports.Data.Excel.4.1.78\lib\net45\BoldReports.Data.Excel.dll</HintPath>
     </Reference>
     <Reference Include="BoldReports.WebForms">
-      <HintPath>packages\BoldReports.WebForms.3.3.23\lib\net45\BoldReports.WebForms.dll</HintPath>
+      <HintPath>packages\BoldReports.WebForms.4.1.78\lib\net45\BoldReports.WebForms.dll</HintPath>
     </Reference>
     <Reference Include="KBCsv, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc96fa93a217f7a1, processorArchitecture=MSIL">
       <HintPath>packages\KBCsv.5.0.0\lib\netstandard1.0\KBCsv.dll</HintPath>
@@ -105,7 +105,7 @@
       <HintPath>packages\Syncfusion.Presentation.AspNet.19.2.0.44\lib\net45\Syncfusion.Presentation.Base.dll</HintPath>
     </Reference>
     <Reference Include="BoldReports.Base.Logger">
-      <HintPath>packages\BoldReports.Base.Logger.3.3.23\lib\net45\BoldReports.Base.Logger.dll</HintPath>
+      <HintPath>packages\BoldReports.Base.Logger.4.1.78\lib\net45\BoldReports.Base.Logger.dll</HintPath>
     </Reference>
     <Reference Include="Syncfusion.SfBarcode.WPF">
       <HintPath>packages\Syncfusion.SfBarcode.WPF.19.2.0.44\lib\net45\Syncfusion.SfBarcode.WPF.dll</HintPath>
@@ -450,13 +450,17 @@
     <Content Include="Scripts\ShapeData\worldcountries.js" />
     <Content Include="Views\Barcode\Index.aspx" />
     <Content Include="Views\CompanySales\Index.aspx" />
+    <Content Include="Views\DataBar\Index.aspx" />
     <Content Include="Views\ConditionalRowFormatting\Index.aspx" />
     <Content Include="Views\ConsolidatedBalanceSheet\Index.aspx" />
     <Content Include="Views\CustomerSupportAnalysis\Index.aspx" />
     <Content Include="Views\DynamicChartSeries\Index.aspx" />
+    <Content Include="Views\DynamicColumns\Index.aspx" />
+    <Content Include="Views\ExternalParameterReport\Index.aspx" />
     <Content Include="Views\GroupingAggregate\Index.aspx" />
     <Content Include="Views\LoadLargeData\Index.aspx" />
     <Content Include="Views\Paystub\Index.aspx" />
+    <Content Include="Views\SparkLine\Index.aspx" />
     <Content Include="Views\ProductCatalog\Index.aspx" />
     <Content Include="Views\Invoice\Index.aspx" />
     <Content Include="Views\MailMerge\Index.aspx" />
@@ -515,7 +519,14 @@
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Views\DataBar\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Views\CompanySales\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataBar\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\ConditionalRowFormatting\Index.aspx.cs">
@@ -544,6 +555,20 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\DynamicChartSeries\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DynamicColumns\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\DynamicColumns\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ExternalParameterReport\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ExternalParameterReport\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\GroupingAggregate\Index.aspx.cs">
@@ -592,7 +617,14 @@
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Views\SparkLine\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Views\Paystub\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SparkLine\Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\PersonalExpenseAnalysis\Index.aspx.cs">
@@ -750,6 +782,7 @@
     <Content Include="Resources\DataSource\ReportSampleDatabase.rds" />
     <Content Include="Resources\Report\barcode.rdl" />
     <Content Include="Resources\Report\company-sales.rdl" />
+    <Content Include="Resources\Report\data-bar.rdl" />
     <Content Include="Resources\Report\conditional-row-formatting.rdl" />
     <Content Include="Resources\Report\customer-support-analysis.rdl" />
     <Content Include="Resources\Report\customer-support-representative-analysis.rdl" />
@@ -762,6 +795,7 @@
     <Content Include="Resources\Report\product-details.rdl" />
     <Content Include="Resources\Report\product-line-sales.rdl" />
     <Content Include="Resources\Report\dynamic-chart-series.rdl" />
+    <Content Include="Resources\Report\dynamic-columns.rdl" />
     <Content Include="Resources\Report\sales-order-detail.rdl" />
     <Content Include="Resources\Report\sales-report.rdl" />
     <Content Include="Resources\Report\territory-sales.rdl" />
@@ -772,6 +806,7 @@
     <Content Include="Resources\Report\load-large-data.rdlc" />
     <Content Include="Resources\Report\consolidated-balance-sheet.rdlc" />
     <Content Include="Resources\Report\paystub.rdlc" />
+    <Content Include="Resources\Report\spark-line.rdlc" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
