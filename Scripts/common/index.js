@@ -4,6 +4,7 @@
     reportBasePath = urlPaths[0];
     reportRouterPath = urlPaths[1] ? urlPaths[1] : '';
     reportSamples = getReportSampleData().samples;
+    bannerData = getReportSampleData().banner;
     reportSampleData = reportSamples.filter(function (sample) {
         return (sample.routerPath === reportRouterPath && sample.basePath === reportBasePath)
     })[0];
@@ -47,13 +48,21 @@ function loadTabContent() {
     childaTab.getElementsByClassName('csharp-content')[0].innerHTML = Prism.highlight(csharp, Prism.languages.csharp);
 }
 
+function setInnerText(selector, text) {
+    document.querySelector(selector).innerText = text;
+}
+
 function updateSampleDetails() {
-    let titleElement = document.querySelector('.ej-main-body-content .ej-title');
-    let metaDescriptionElement = document.querySelector('.ej-main-body-content .ej-meta-description');
-    titleElement.innerText = reportSampleData.sampleName;
-    metaDescriptionElement.innerText = reportSampleData.metaData.description;
-    document.querySelector("meta[property='og:title']").setAttribute('content', document.title);
-    document.querySelector("meta[name='description']").setAttribute('property', 'og:description');
+    setInnerText('.ej-main-body-content .ej-title', reportSampleData.sampleName);
+    setInnerText('.ej-main-body-content .ej-meta-description', reportSampleData.metaData.description);
+
+    //Banner
+    setInnerText('.ej-main-body-content .ad-header', bannerData.text);
+    setInnerText('.ej-main-body-content .cnt-text-1', bannerData.features[0]);
+    setInnerText('.ej-main-body-content .cnt-text-2', bannerData.features[1]);
+    setInnerText('.ej-main-body-content .cnt-text-3', bannerData.features[2]);
+    document.querySelector('.free-trial-url').setAttribute('href', bannerData.freeTrialUrl);
+
 }
 
 function setReportsHeight() {
@@ -63,8 +72,16 @@ function setReportsHeight() {
         style.id = 'reports-style';
         document.body.appendChild(style);
     }
-    style.textContent = 'ej-sample { display:block; overflow: hidden; height:' + (window.innerHeight -
-        (document.getElementById('parentTabContent').getBoundingClientRect().top - document.body.getBoundingClientRect().top)) + 'px}';
+    style.textContent = `ej-sample{
+        display: flex;
+        overflow: hidden;
+        min-height: 600px;
+      }
+      
+      #MainContent_Reports{
+        height: auto !important;
+        width: 100% !important;
+      }`;
 }
 
 function updateOverlay() {
@@ -78,15 +95,15 @@ function updateOverlay() {
 
 function updateTab() {
     let sourceTab = document.querySelector('.ej-nav-item.source-tab');
-    let descTab = document.querySelector('.ej-nav-item.desc-tab');
+    // let descTab = document.querySelector('.ej-nav-item.desc-tab');
     if (window.matchMedia('(max-width:850px)').matches) {
         $('#parentTab li:first-child a').tab('show');
         sourceTab.classList.add('e-hidden');
-        descTab.classList.add('e-hidden');
+        // descTab.classList.add('e-hidden');
     } else {
         if (sourceTab.classList.contains('e-hidden')) {
             sourceTab.classList.remove('e-hidden');
-            descTab.classList.remove('e-hidden');
+            // descTab.classList.remove('e-hidden');
         }
     }
 }
