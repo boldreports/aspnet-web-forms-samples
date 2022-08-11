@@ -136,27 +136,44 @@ body {
             font-size: 20px;
             cursor: pointer;
             text-decoration: none;
-            margin: 0 20px 0px 10px;
+            margin: 0 10px 0px 10px;
             color: #333;
             opacity: 0.87;
         }
 
+
+            /* header try-it-free and schedule-free-demo*/
             .ej-preview-header .ej-preview-right-side a.ej-preview-button {
-                height: 32px;
-                font-size: 14px;
+                padding-right: 0.5rem;
+                padding-left: 0.5rem;
+                width: 200px;
+                border-radius: 5px;
+                height: 40px;
+                font-size: 16px;
                 font-weight: 500;
                 opacity: 1;
-                margin-left: 20px;
                 text-decoration: none;
-                padding: 5.5px 13px;
                 cursor: pointer;
-                background-color: #ff5f23;
-                color: #ffffff;
-                border-radius: 2px;
+                text-align: center;
+                padding: 0.5rem 1rem;
             }
 
-                .ej-preview-header .ej-preview-right-side a.ej-preview-button:hover {
+                .ej-preview-header .ej-preview-right-side a.ej-preview-button.bold-schedule-demo {
+                    border-color: #ff4800;
+                    border-style: solid;
+                    border-width: 1px;
+                    background-color: #ffffff;
+                    color: #ff4800 !important;
+                }
+
+                    .ej-preview-header .ej-preview-right-side a.ej-preview-button.bold-schedule-demo:hover {
+                        background: #ff4801;
+                        color: white !important;
+                    }
+
+                .ej-preview-header .ej-preview-right-side a.ej-preview-button.try-it-free {
                     background: #ff4801;
+                    color: white;
                 }
 
         .ej-preview-header .ej-preview-right-side .preview-icon-product:before {

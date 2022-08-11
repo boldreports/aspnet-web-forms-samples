@@ -45,6 +45,8 @@
         <script type="text/javascript" src="<%=Page.ResolveUrl("~/Scripts/bold-reports/data-visualization/ej2-circulargauge.min.js")%>"></script>
         <script type="text/javascript" src="<%=Page.ResolveUrl("~/Scripts/bold-reports/data-visualization/ej2-lineargauge.min.js")%>"></script>
         <script type="text/javascript" src="<%=Page.ResolveUrl("~/Scripts/bold-reports/data-visualization/ej2-maps.min.js")%>"></script>
+        <script type="text/javascript" src="<%=Page.ResolveUrl("~/Scripts/ej2/ej2-buttons.min.js")%>"></script>
+        <link href="<%=Page.ResolveUrl("~/Content/css/ej2/ej2-buttons.min.css")%>" rel="stylesheet" />
     <link href="<%=Page.ResolveUrl("~/favicon.ico")%>" rel="shortcut icon" type="image/x-icon" />
     <%: Styles.Render("~/Content/main") %>
 </head>
@@ -63,104 +65,155 @@
             <div class="bounce1"></div>
             <div class="bounce2"></div>
             <div class="bounce3"></div>
-        </div>
-    </div>
-    <%: Scripts.Render("~/bundles/main/vendor") %>
-    <div class="ej-body e-hidden">
-        <ej-header>
-         <%@ Register Src="header.ascx" TagName="header" TagPrefix="Bold" %>
-    <ej-header>
-    <Bold:header runat="server" />
-    </ej-header>
-        </ej-header>
-        <div class="mobile-overlay" onclick="onMobileOverlayClick()"></div>
-
-        <div class="ej-main-parent-content">
-            <%@ Register Src="SideBar.ascx" TagName="sidebar" TagPrefix="Bold" %>
-            <ej-sidebar>
-        <Bold:sidebar runat="server" />
-           </ej-sidebar>
-            <div class="ej-main-child-content">
-                <ej-main-content>
-                    <div class="ej-main-body-content">
-                        <h1 class="ej-title"></h1>
-                        <p class="ej-meta-description"></p>
-                        <div id="parentTabContainer">
-                            <ul class="nav ej-nav-header" id="parentTab" role="tablist">
-                                <li class="ej-nav-item">
-                                    <a href="#demo" data-toggle="tab" role="tab" aria-selected="true">
-                                        <Span class="ej-sb-icons ej-demo-icon"></Span><Span>DEMO</Span>
-                                    </a>
-                                </li>
-                                <li class="ej-nav-item source-tab">
-                                    <a href="#source" data-toggle="tab" role="tab" aria-selected="false">
-                                        <Span class="ej-sb-icons ej-source-icon"></Span><Span>SOURCE</Span>
-                                    </a>
-                                </li>
-                                <li class="ej-nav-item desc-tab">
-                                    <a href="#ej-description" data-toggle="tab" role="tab" aria-selected="false">
-                                        <Span class="ej-sb-icons ej-description-icon"></Span><Span>Description</Span>
-                                    </a>
-                                </li>
-                                <li class="ej-nav ej-nav-item ej-sb-icons">
-                                    <div class="new-tab ej-nav-sub-item">
-                                        <div class="ej-nav-new" title="Open in New Window" onclick="onTabBtnClick()" tabindex="0"></div>
-                                    </div>
-                                    <div class="ej-nav-prev ej-nav-sub-item" title="Previous Sample" onclick="onTabPrev()" tabindex="0"></div>
-                                    <div class="ej-nav-next ej-nav-sub-item" title="Next Sample" onclick="onTabNext()" tabindex="0"></div>
-                                </li>
-                            </ul>
-                            <div class="tab-content ej-tab-content" id="parentTabContent">
-                                <div class="tab-pane ej-tab-pane" id="demo" role="tabpanel">
-                                    <ej-sample>
-                                <asp:ContentPlaceHolder ID="MainContent" runat="server">
-                                </asp:ContentPlaceHolder>
-                                    </ej-sample>
-                                </div>
-                                <div class="tab-pane" id="source" role="tabpanel">
-                                    <div id="childTabContainer">
-                                        <div class="tab-content ej-tab-content" id="childTabContent">
-                                            <div class="tab-pane ej-tab-pane csharp-content show active" id="csharp" role="tabpanel"></div>
-                                            <div class="tab-pane ej-tab-pane cshtml-content" id="cshtml" role="tabpanel"></div>
-                                        </div>
-                                        <ul class="nav ej-nav-header" id="childtTab" role="tablist">
-                                            <li class="ej-nav-item">
-                                                <a href="#csharp" class="active csharp-header" data-toggle="tab" role="tab" aria-selected="true"></a>
-                                            </li>
-                                            <li class="ej-nav-item">
-                                                <a class="cshtml-header" href="#cshtml" data-toggle="tab" role="tab" aria-selected="false"></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="tab-pane ej-tab-pane" id="ej-description" role="tabpanel">
-                                   <asp:ContentPlaceHolder ID="description" runat="server">
-                                   </asp:ContentPlaceHolder>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </ej-main-content>
             </div>
         </div>
-    </div>
-    <script>
-        let reportSampleData;
-        let reportSamples;
-        let reportBasePath;
-        let reportRouterPath;
+        <%: Scripts.Render("~/bundles/main/vendor") %>
+        <div class="ej-body e-hidden">
+            <ej-header>
+                <%@ Register Src="header.ascx" TagName="header" TagPrefix="Bold" %>
+                <ej-header>
+                    <Bold:header runat="server" />
+                </ej-header>
+    </ej-header>
+            <div class="mobile-overlay" onclick="onMobileOverlayClick()"></div>
 
-        function getReportSampleData() {
-            return <%= sampledata %>;
-        }
+            <div class="ej-main-parent-content">
+                <%@ Register Src="SideBar.ascx" TagName="sidebar" TagPrefix="Bold" %>
+                <ej-sidebar>
+                    <Bold:sidebar runat="server" />
+                </ej-sidebar>
+                <div class="ej-main-child-content">
+                    <ej-main-content>
+                        <div class="ej-main-body-content">
+                            <div>
+                                <h1 class="ej-title"></h1>
+                                <p class="ej-meta-description"></p>
+                                <div id="parentTabContainer">
+                                    <ul class="nav ej-nav-header" id="parentTab" role="tablist">
+                                        <li class="ej-nav-item">
+                                            <a href="#demo" data-toggle="tab" role="tab" aria-selected="true">
+                                                <span class="ej-sb-icons ej-demo-icon"></span><span>DEMO</span>
+                                            </a>
+                                        </li>
+                                        <li class="ej-nav-item source-tab">
+                                            <a href="#source" data-toggle="tab" role="tab" aria-selected="false">
+                                                <span class="ej-sb-icons ej-source-icon"></span><span>SOURCE</span>
+                                            </a>
+                                        </li>
+                                        <%--  <li class="ej-nav-item desc-tab">
+                                        <a href="#ej-description" data-toggle="tab" role="tab" aria-selected="false">
+                                            <Span class="ej-sb-icons ej-description-icon"></Span><Span>Description</Span>
+                                        </a>
+                                    </li>--%>
+                                        <li class="ej-nav ej-nav-item ej-sb-icons">
+                                            <div class="new-tab ej-nav-sub-item">
+                                                <div class="ej-nav-new" title="Open in New Window" onclick="onTabBtnClick()" tabindex="0"></div>
+                                            </div>
+                                            <div class="ej-nav-prev ej-nav-sub-item" title="Previous Sample" onclick="onTabPrev()" tabindex="0"></div>
+                                            <div class="ej-nav-next ej-nav-sub-item" title="Next Sample" onclick="onTabNext()" tabindex="0"></div>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content ej-tab-content" id="parentTabContent">
+                                        <div class="tab-pane ej-tab-pane" id="demo" role="tabpanel">
+                                            <ej-sample>
+                                                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                                                </asp:ContentPlaceHolder>
+                                            </ej-sample>
+                                        </div>
+                                        <div class="tab-pane" id="source" role="tabpanel">
+                                            <div id="childTabContainer">
+                                                <div class="tab-content ej-tab-content" id="childTabContent">
+                                                    <div class="tab-pane ej-tab-pane csharp-content show active" id="csharp" role="tabpanel"></div>
+                                                    <div class="tab-pane ej-tab-pane cshtml-content" id="cshtml" role="tabpanel"></div>
+                                                </div>
+                                                <ul class="nav ej-nav-header" id="childtTab" role="tablist">
+                                                    <li class="ej-nav-item">
+                                                        <a href="#csharp" class="active csharp-header" data-toggle="tab" role="tab" aria-selected="true"></a>
+                                                    </li>
+                                                    <li class="ej-nav-item">
+                                                        <a class="cshtml-header" href="#cshtml" data-toggle="tab" role="tab" aria-selected="false"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <%--  <div class="tab-pane ej-tab-pane" id="ej-description" role="tabpanel">
+                                    <asp:ContentPlaceHolder ID="description" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                    </div>--%>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="tab-pane ej-tab-pane" id="ej-description" role="tabpanel">
+                                    <asp:ContentPlaceHolder ID="description" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                </div>
+                            </div>
+                            <!--Banner section-->
+                            <div id="footer-banner">
+                                <div id="ad-banner-head" class="ad-header"></div>
+                                <div class="content-area" style="display: flex; flex-wrap: wrap;">
+                                    <div class="ad-cnt-pt">
+                                        <!-- <div class="ad-cnt-icon click-icon sb-icons sb-icon-icon-selection"></div> -->
+                                        <span class="tick-mark"></span>
+                                        <div class="cnt-text cnt-text-1"></div>
+                                    </div>
+                                    <div class="ad-cnt-pt">
+                                        <!-- <div class="ad-cnt-icon click-icon sb-icons sb-icon-icon-selection"></div> -->
+                                        <span class="tick-mark"></span>
+                                        <div class="cnt-text cnt-text-2"></div>
+                                    </div>
+                                    <div class="ad-cnt-pt">
+                                        <!-- <div class="ad-cnt-icon click-icon sb-icons sb-icon-icon-selection"></div> -->
+                                        <span class="tick-mark"></span>
+                                        <div class="cnt-text cnt-text-3"></div>
+                                    </div>
+                                </div>
+                                <a class="free-trial-url" target="_blank">
+                                    <div class="free-trial">TRY IT FOR FREE</div>
+                                </a>
+                            </div>
+                            <!--Footer section-->
+                            <div class="ej-lp-footer">
+                                <div class="ej-lp-footer-links">
+                                    <a href="https://help.boldreports.com/embedded-reporting/aspnet-web-forms-reporting/" target="_blank">Documentation
+                                    </a>
+                                    <a href="https://www.boldreports.com/blog" target="_blank">
+                                        Blog
+                                    </a>
+                                    <a href="https://www.boldreports.com/faq" target="_blank">
+                                        FAQ
+                                    </a>
+                                    <a href="https://support.boldreports.com/" target="_blank">
+                                        Support
+                                    </a>
+                                    <a href="https://www.boldreports.com/feedback" target="_blank">
+                                        Feedback
+                                    </a>
+                                </div>
+                                <div class="ej-lp-footer-copyright">Copyright © 2001-2022 Syncfusion Inc.</div>
+                            </div>
+                        </div>
+                    </ej-main-content>
+                </div>
+            </div>
+        </div>
+        <script>
+            let reportSampleData;
+            let reportSamples;
+            let reportBasePath;
+            let reportRouterPath;
 
-        function getBasePath() {
-            return "<%= Page.ResolveUrl("~/") %>";
-        }
+            function getReportSampleData() {
+                return <%= sampledata %>;
+            }
 
-</script>
+            function getBasePath() {
+                return "<%= Page.ResolveUrl("~/") %>";
+            }
+
+        </script>
         <%: Scripts.Render("~/bundles/main/app") %>
-        </form>
+    </form>
 </body>
 </html>
