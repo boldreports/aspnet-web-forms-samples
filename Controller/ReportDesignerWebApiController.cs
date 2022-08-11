@@ -21,7 +21,6 @@ namespace ReportsWebFormsSamples.Controllers
     [RoutePrefix("")]
     public class ReportDesignerWebApiController : ApiController, IReportDesignerController, IReportLogger, IReportHelperSettings
     {
-        const string CachePath = "Cache\\";
         internal ReportHelperSettings _helperSettings = null;
         internal ExternalServer Server
         {
@@ -155,20 +154,13 @@ namespace ReportsWebFormsSamples.Controllers
 
         private string GetFilePath(string itemName, string key)
         {
-            string targetFolder = HttpContext.Current.Server.MapPath("~/");
-            targetFolder += "Cache";
-
-            if (!Directory.Exists(targetFolder))
+            string dirPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"Cache",key);
+            if (!Directory.Exists(dirPath))
             {
-                Directory.CreateDirectory(targetFolder);
+                Directory.CreateDirectory(dirPath);
             }
 
-            if (!Directory.Exists(targetFolder + "\\" + key))
-            {
-                Directory.CreateDirectory(targetFolder + "\\" + key);
-            }
-
-            return targetFolder + "\\" + key + "\\" + itemName;
+            return Path.Combine(dirPath, itemName);
         }
 
         public bool SetData(string key, string itemId, ItemInfo itemData, out string errMsg)
@@ -204,7 +196,17 @@ namespace ReportsWebFormsSamples.Controllers
             var resource = new ResourceInfo();
             try
             {
-                resource.Data = File.ReadAllBytes(this.GetFilePath(itemId, key));
+                var filePath = this.GetFilePath(itemId, key);
+                if (itemId.Equals(Path.GetFileName(filePath), StringComparison.InvariantCultureIgnoreCase) && File.Exists(filePath))
+                {
+                    resource.Data = File.ReadAllBytes(filePath);
+                    LogExtension.LogInfo(string.Format("Method Name: {0}; Class Name: {1}; Message: {2};", "GetData", "CacheHelper", string.Format("File data retrieved from the path: {0}", filePath)),null);
+                }
+                else
+                {
+                    resource.ErrorMessage = "File not found from the specified path";
+                    LogExtension.LogInfo(string.Format("Method Name: {0}; Class Name: {1}; Message: {2};", "GetData", "CacheHelper", string.Format("File not found from the specified path: {0}", filePath)),null);
+                }
             }
             catch (Exception ex)
             {
