@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("ReportsWebFormsSamples")]
-[assembly: AssemblyCopyright("Copyright © 2001 - 2021 Syncfusion Inc.")]
+[assembly: AssemblyCopyright("Copyright © 2001 - 2023 Syncfusion Inc.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: log4net.Config.XmlConfigurator(ConfigFile = "log4net.config")]
