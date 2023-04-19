@@ -88,6 +88,11 @@ namespace ReportsWebFormsSamples.Controllers
                     fileName += ".ppt";
                     format = WriterFormat.PPT;
                 }
+                else if (type == "xml")
+                {
+                    fileName += ".xml";
+                    format = WriterFormat.XML;
+                }
                 else
                 {
                     fileName += ".xlsx";

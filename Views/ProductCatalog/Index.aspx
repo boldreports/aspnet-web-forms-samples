@@ -22,7 +22,7 @@
        <div id="description">
         <p>
             This report shows Mountain bike products information using the <a
-                href="https://help.boldreports.com/on-premise/report-designer/report-items/tablix/"
+                href="https://help.boldreports.com/enterprise-reporting/designer-guide/report-designer/report-items/tablix/"
                 target="_blank">Tablix</a> report item in RDLC report.
         </p>
         <ul>
@@ -31,7 +31,7 @@
         </ul>
         <p>
             More information about RDLC report can be found in this <a
-                href="https://help.boldreports.com/javascript/report-viewer/rdlc-report/" target="_blank">documentation</a>
+                href="https://help.boldreports.com/embedded-reporting/aspnet-web-forms-reporting/report-viewer/rdlc-report/" target="_blank">documentation</a>
             section.
         </p>
     </div>

@@ -31,7 +31,7 @@
         </ul>
         <p>
             More information about the table data region can be found in this <a
-                href="https://help.boldreports.com/on-premise/report-designer/report-items/tablix/"
+                href="https://help.boldreports.com/enterprise-reporting/designer-guide/report-designer/report-items/tablix/"
                 target="_blank">documentation</a> section.
         </p>
     </div>

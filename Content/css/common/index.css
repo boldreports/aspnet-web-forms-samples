@@ -14,7 +14,8 @@
     right: 0;
     top: 0;
     transition: left 400ms ease;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .mobile-overlay {

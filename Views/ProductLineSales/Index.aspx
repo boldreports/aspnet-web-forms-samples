@@ -15,9 +15,9 @@
     <div id="description">
         <p>
             The Product Line Sales RDL report represents the best performing sales people and stores using <a
-                href="https://help.boldreports.com/on-premise/report-designer/report-items/tablix/"
+                href="https://help.boldreports.com/enterprise-reporting/designer-guide/report-designer/report-items/tablix/"
                 target="_blank">Tablix</a> and <a
-                href="https://help.boldreports.com/on-premise/report-designer/report-items/chart/" target="_blank">Chart</a>
+                href="https://help.boldreports.com/enterprise-reporting/designer-guide/report-designer/report-items/chart/" target="_blank">Chart</a>
             report items.
         </p>
         <ul>
@@ -27,7 +27,7 @@
         </ul>
         <p>
             More information about Cascading Parameters can be found in this <a
-                href="https://help.boldreports.com/on-premise/report-designer/report-parameters/create-cascading-parameter/"
+                href="https://help.boldreports.com/enterprise-reporting/designer-guide/report-designer/report-parameters/create-cascading-parameter/"
                 target="_blank">documentation</a> section.
         </p>
     </div>
