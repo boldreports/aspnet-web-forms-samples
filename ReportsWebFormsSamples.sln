@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.33328.57
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.539
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportsWebFormsSamples", "ReportsWebFormsSamples.csproj", "{09F9442B-65AE-411A-9417-032F3EF58182}"
 EndProject
