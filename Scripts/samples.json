@@ -8,10 +8,20 @@
     "Angular": "angular/#/",
     "JavaScript": "javascript/#/",
     "React": "react/#/",
+    "Blazor": "blazor/",
     "ASP.NET Core": "aspnet-core/",
     "ASP.NET MVC": "aspnet-mvc/"
   },
   "platform": "ASP.NET WebForms",
+  "banner": {
+    "text": "Start embedding powerful business intelligence reporting inside your modern web apps today",
+    "features": [
+      "User-friendly Report Server",
+      "Intuitive drag-and-drop widgets",
+      "Hassle-free licensing"
+    ],
+    "freeTrialUrl": "https://app.boldid.net/reporting/embedded/register?plan=120&evaluation=v2&leadsource=demos.boldreports.com&gclid=&referrerroriginurl=https://demos.boldreports.com/pricing&secondaryreferraloriginurl=https://demos.boldreports.com/"
+  },
   "samples": [
     {
       "routerPath": "ProductLineSales",
@@ -21,7 +31,6 @@
         "isLandscape": false,
         "index": 7
       },
-      "status": "",
       "metaData": {
         "description": "The Product Line Sales report displays sales details organized by category and subcategory of products using cascading parameters in ASP.NET WebForms Bold Report Viewer."
       }
@@ -34,7 +43,6 @@
         "isLandscape": true,
         "index": 1
       },
-      "status": "",
       "metaData": {
         "description": "Company Sales report shows product sales against year in matrix format using SSRS Tablix report item in ASP.NET WebForms Bold Report Viewer."
       }
@@ -293,15 +301,75 @@
       }
     },
     {
-      "routerPath": "",
-      "sampleName": "Report Writer",
-      "basePath": "ReportWriter",
+      "routerPath": "DataBar",
+      "sampleName": "Data Bar",
+      "basePath": "ReportViewer",
       "imageDetails": {
         "isLandscape": true,
         "index": 9
       },
       "metaData": {
-        "description": "This demos allows you to export the RDL(C) report with PDF, Word, and more file formats without previewing it in viewer using ASP.NET WebForms Bold Report Writer."
+        "description": "This demo represents company sales against year in table format with data bar report item in ASP.NET WebForms Bold Report Viewer."
+      }
+    },
+    {
+      "routerPath": "SparkLine",
+      "sampleName": "Spark Line",
+      "basePath": "ReportViewer",
+      "imageDetails": {
+        "isLandscape": true,
+        "index": 10
+      },
+      "metaData": {
+        "description": "This demo shows the company sales data with sparkline report item to represents the sales trend in ASP.NET WebForms Bold Report Viewer."
+      }
+    },
+    {
+      "routerPath": "DynamicColumns",
+      "sampleName": "Dynamic Columns",
+      "basePath": "ReportViewer",
+      "imageDetails": {
+        "isLandscape": false,
+        "index": 13
+      },
+      "metaData": {
+        "description": "This demos allows you to choose the column of the table dynamically in ASP.NET Webforms Bold Report Viewer."
+      }
+    },
+    {
+      "routerPath": "ExternalParameterReport",
+      "sampleName": "External Parameter Report",
+      "basePath": "ReportViewer",
+      "imageDetails": {
+        "isLandscape": false,
+        "index": 7
+      },
+      "metaData": {
+        "description": "The Product Line Sales report displays sales details organized by category and subcategory of products using external cascading parameter in ASP.NET WebForms Bold Report Viewer."
+      }
+    },
+    {
+      "routerPath": "ParameterCustomization",
+      "sampleName": "Parameter Customization",
+      "basePath": "ReportViewer",
+      "imageDetails": {
+        "isLandscape": false,
+        "index": 7
+      },
+      "metaData": {
+        "description": "The Product Line Sales report displays sales details organized by category and subcategory of products using cascading parameters and date time picker non cascading parameters in ASP.NET Webforms Bold Report Viewer."
+      }
+    },
+    {
+      "routerPath": "",
+      "sampleName": "Report Writer",
+      "basePath": "ReportWriter",
+      "imageDetails": {
+        "isLandscape": true,
+        "index": 11
+      },
+      "metaData": {
+        "description": "This demos allows you to export the RDL or RDLC report with popular file formats like PDF, HTML, Microsoft Word, and Microsoft Excel without previewing the report in viewer using ASP.NET WebForms Bold Report Writer."
       }
     }
   ]

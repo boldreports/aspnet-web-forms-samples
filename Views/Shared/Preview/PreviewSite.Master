@@ -39,6 +39,8 @@
         <script type="text/javascript" src="<%=Page.ResolveUrl("~/Scripts/bold-reports/data-visualization/ej2-circulargauge.min.js")%>"></script>
         <script type="text/javascript" src="<%=Page.ResolveUrl("~/Scripts/bold-reports/data-visualization/ej2-lineargauge.min.js")%>"></script>
         <script type="text/javascript" src="<%=Page.ResolveUrl("~/Scripts/bold-reports/data-visualization/ej2-maps.min.js")%>"></script>
+        <script type="text/javascript" src="<%=Page.ResolveUrl("~/Scripts/ej2/ej2-buttons.min.js")%>"></script>
+        <link href="<%=Page.ResolveUrl("~/Content/css/ej2/ej2-buttons.min.css")%>" rel="stylesheet" />
     <link href="<%=Page.ResolveUrl("~/favicon.ico")%>" rel="shortcut icon" type="image/x-icon" />
     <%: Styles.Render("~/Content/preview") %>
 </head>
@@ -80,18 +82,11 @@
                     </a>
                 </div>
                 <div class="ej-preview-right-side">
-                    <a href="https://help.boldreports.com" title="Documentation" target="_blank">
-                        <span class="ej-preview-header-icons preview-icon-documentation"></span>
-                    </a>
-                    <a href="https://www.boldreports.com" target="_blank" title="Product Details">
-                        <span class="ej-preview-header-icons preview-icon-product"></span>
-                    </a>
-                    <a href="https://www.boldreports.com/pricing/on-premise/" target="_blank" title="Download Now">
-                        <span class="ej-preview-header-icons preview-icon-download"></span>
-                    </a>
-                    <div class="ej-preview-divider"></div>
-                    <a class="ej-preview-button" href="https://on-premise-demo.boldreports.com" title="Report Server"
-                        target="_blank">Explore Report Server</a>
+                   <!-- <a class="ej-preview-button bold-schedule-demo" href="https://www.boldreports.com/schedule-free-demo"
+                        title="Report Server" target="_blank">Schedule Free Demo</a> -->
+                    <a class="ej-preview-button product-detail" href=<%=(bool)HttpContext.Current.Request.Path.Contains("/ReportDesigner") ? "https://www.boldreports.com/embedded-reporting/aspnet-web-forms-report-designer" : "https://www.boldreports.com/embedded-reporting/aspnet-web-forms-report-viewer"%> target="_blank">Product Detail</a>
+                    <a class="ej-preview-button try-it-free" href="https://app.boldid.net/reporting/embedded/register?plan=120&evaluation=v2&leadsource=demos.boldreports.com&gclid=&referrerroriginurl=https://demos.boldreports.com/pricing&secondaryreferraloriginurl=https://demos.boldreports.com/"
+                        title="Report Server" target="_blank">Try it Free</a>
                 </div>
             </div>
             <div class="ej-preview-content">

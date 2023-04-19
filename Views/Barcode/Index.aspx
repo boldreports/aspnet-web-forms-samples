@@ -23,7 +23,7 @@
         </p>
         <p>
             More information about Barcode can be found in this <a
-                href="https://help.boldreports.com/on-premise/report-designer/report-items/barcode/"
+                href="https://help.boldreports.com/enterprise-reporting/designer-guide/report-designer/report-items/barcode/"
                 target="_blank">documentation</a> section.
         </p>
     </div>
