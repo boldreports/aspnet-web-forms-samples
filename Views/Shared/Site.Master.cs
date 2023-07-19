@@ -11,9 +11,11 @@ namespace ReportsWebFormsSamples
 {
     public partial class SiteMaster : MasterPage
     {
-        public static dynamic sampledata = SampleData.getSampleData();
+        public static dynamic sampledata = SampleData.getSampleData();       
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            CSRFHandler.Validate(this.Page,ForgeryToken);
         }
     }
 }
