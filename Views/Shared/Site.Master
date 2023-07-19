@@ -59,6 +59,7 @@
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
     <form id="reportform" runat="server">
+        <asp:HiddenField ID="ForgeryToken" runat="server" />
     <div class="splash">
         <div class="message">ASP.NET WebForms Reports</div>
         <div class="loader">

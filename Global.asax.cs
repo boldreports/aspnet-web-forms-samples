@@ -17,6 +17,8 @@ using BoldReports.Base.Logger;
 using BoldReports.Web;
 using Newtonsoft.Json;
 using System.Reflection;
+using System.Web.UI.WebControls;
+using System.Web.UI;
 
 namespace ReportsWebFormsSamples
 {
@@ -159,6 +161,16 @@ namespace ReportsWebFormsSamples
                 LogExtension.LogError("Failed to Load Map Settings", ex, MethodBase.GetCurrentMethod());
             }
             return null;
+        }
+    }
+    public class CSRFHandler
+    {
+        public static void Validate(Page page, HiddenField forgeryToken)
+        {
+                Guid antiforgeryToken = Guid.NewGuid();
+                page.Session["AntiforgeryToken"] = antiforgeryToken;
+                forgeryToken.Value = antiforgeryToken.ToString();
+
         }
     }
 
